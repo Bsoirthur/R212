@@ -11,19 +11,76 @@
     <title>Document</title>
 </head>
 <body style="background-color: midnightblue;">
-  <div class="container-sm">100% wide until small breakpoint</div>
+  <div class="container-xl" style="color: white;">Toutes Mes Musiques</div>
   <div class="container-fluid">
     ...
   </div>
   
-    <div class="card" style="width: 18rem;">
-
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">1</h5>
-          <p class="card-text">2</p>
-          <a href="#" class="btn btn-primary">3</a>
+    
+  <div class="d-flex align-items-start flex-direction: column">
+      <div class="card w-25">
+      <div class="card text-bg-dark">
+        <img src="ordi maquette.png" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small>Last updated 3 mins ago</small></p>
         </div>
       </div>
+    </div>
+   
+    <div class="card w-25">
+      <div class="card text-bg-dark">
+        <img src="ordi maquette.png" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small>Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <div id="trackList"></div>
+
+<template id="trackCard">
+    <div class="card">
+        <img class="card-img-top">
+        <div class="card-body d-flex flex-column justify-content-between gap-3">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+        </div>
+    </div>
+</template>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  
 </body>
 </html>
