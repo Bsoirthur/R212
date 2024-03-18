@@ -1,0 +1,16 @@
+.card {
+    width: 250px;
+    height: auto;
+}
+#trackList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(20% - 20px); /* Pour 5 cartes par ligne */
+    margin: 10px;
+  }
+.card {
+      width: calc(16.666% - 20px);
+    }
+  
