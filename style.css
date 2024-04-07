@@ -13,3 +13,6 @@
 .card {
       width: calc(16.666% - 20px);
     }
+.bg-graphique {
+  background-color: white;
+}
